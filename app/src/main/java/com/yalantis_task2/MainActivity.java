@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    Snackbar.make(view, "FloatingActionButton", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
             });
@@ -59,23 +59,22 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void initTabs() {
-        TabFragmentRecyclerView tabfragment1 = new TabFragmentRecyclerView();
+        TabFragmentRecyclerView tabFragmentRecyclerView1 = new TabFragmentRecyclerView();
         Bundle args1 = new Bundle();
         args1.putInt("TabNumber", 1);
-        tabfragment1.setArguments(args1);
+        tabFragmentRecyclerView1.setArguments(args1);
 
-
-        TabFragmentRecyclerView tabfr2 = new TabFragmentRecyclerView();
+        TabFragmentRecyclerView tabFragmentRecyclerView2 = new TabFragmentRecyclerView();
         Bundle args2 = new Bundle();
         args2.putInt("TabNumber", 2);
-        tabfr2.setArguments(args2);
+        tabFragmentRecyclerView2.setArguments(args2);
 
-        TabFragmentListView tabfr3 = new TabFragmentListView();
+        TabFragmentListView tabFragmentListView = new TabFragmentListView();
 
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(tabfragment1);
-        fragments.add(tabfr2);
-        fragments.add(tabfr3);
+        fragments.add(tabFragmentRecyclerView1);
+        fragments.add(tabFragmentRecyclerView2);
+        fragments.add(tabFragmentListView);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         if (tabLayout != null) {
