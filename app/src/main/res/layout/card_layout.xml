@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_marginLeft="@dimen/card_view_margin"
+    android:layout_marginRight="@dimen/card_view_margin"
+    android:layout_marginBottom="@dimen/card_view_margin"
+    android:padding="@dimen/card_view_margin"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_view_height"
+    card_view:cardCornerRadius="@dimen/cardCornerRadius"
+    android:onClick="CardViewOnClick1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_marginLeft="@dimen/image1_marginLeft"
+            android:layout_marginStart="@dimen/image1_marginLeft"
+            android:layout_marginTop="@dimen/image1_marginTop"
+            android:layout_width="@dimen/image1_size"
+            android:alpha="0.54"
+            android:layout_height="@dimen/image1_size"
+            />
+        <View
+            android:layout_width="@dimen/line_width"
+            android:id="@+id/divider"
+            android:layout_marginLeft="@dimen/line_marginLeft"
+            android:layout_marginStart="@dimen/line_marginLeft"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:alpha="0.11"/>
+        <TextView
+            android:id="@+id/txtNameEnterprise"
+            android:layout_marginLeft="@dimen/text_title_marginLeft"
+            android:layout_marginStart="@dimen/text_title_marginLeft"
+            android:layout_marginTop="@dimen/text_title_marginTop"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/imageLike"
+            android:layout_width="@dimen/image2_width"
+            android:layout_height="@dimen/image2_height"
+            android:layout_marginLeft="@dimen/image2_marginLeft"
+            android:layout_marginStart="@dimen/image2_marginLeft"
+            android:layout_marginTop="@dimen/image2_marginTop"
+            android:alpha="0.19"
+            />
+        <TextView
+            android:id="@+id/txtAmountLikes"
+            style="@style/text_date_cardView"
+            android:layout_marginLeft="@dimen/txtAmountLikes_marginLeft"
+            android:layout_marginStart="@dimen/txtAmountLikes_marginLeft"
+            android:layout_marginTop="@dimen/txtAmountLikes_marginTop" />
+        <TextView
+            android:id="@+id/txtStreet"
+            style="@style/text_date_cardView"
+            android:layout_marginLeft="@dimen/txtStreet_marginLeft"
+            android:layout_marginStart="@dimen/txtStreet_marginLeft"
+            android:layout_marginTop="@dimen/txtStreet_marginTop" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            style="@style/text_date_cardView"
+            android:layout_marginTop="@dimen/txtDate_marginTop"
+            android:layout_marginStart="@dimen/txtDate_marginLeft"
+            android:layout_marginLeft="@dimen/txtDate_marginLeft"
+            android:layout_marginBottom="@dimen/txtDate_marginBottom" />
+
+        <TextView
+            android:id="@+id/txtAmountDays"
+            style="@style/text_date_cardView"
+            android:layout_marginStart="@dimen/txtAmountDays_marginLeft"
+            android:layout_marginLeft="@dimen/txtAmountDays_marginLeft"
+            android:layout_marginTop="@dimen/txtAmountDays_marginTop" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

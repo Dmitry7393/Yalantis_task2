@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6082b4</color>
+    <color name="colorPrimaryDark">#45648a</color>
+    <color name="colorAccent">#ff9c26</color>
+
+    <color name="color_nav_header_vertical_spacing">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorOrange">#FF5300</color>
+    <color name="colorGray">#808080</color>.
+    <color name="colorStatusBar">#45648a</color>
+    <color name="colorBackgroundFirstTask">#dcdcdc</color>
+</resources>

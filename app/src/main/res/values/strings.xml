@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Yalantis_task2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_actionbar">Всі звернення</string>
+    <string name="action_settings">Settings</string>
+    <string name="Request">Всі звернення</string>
+    <string name="Request_on_map">Звернення на мапі</string>
+    <string name="Sign_in">Увійти в аккаунт</string>
+    <string name="navigation_drawer_header">e-contact</string>
+
+
+    <string-array name="block0">
+        <item>com.yalantis_task2:drawable/image_list</item>
+        <item> Прибирання та санітарній стан території </item>
+        <item>Вул. Вадима Гетьмана, 42</item>
+        <item>com.yalantis_task2:drawable/image_like</item>
+        <item>48</item>
+        <item>Кві 25, 2016</item>
+        <item>-12 днів</item>
+    </string-array>
+
+    <string-array name="block1">
+        <item>com.yalantis_task2:drawable/image_diagram</item>
+        <item>
+        Питання  нарахування боргу за електроенергію
+        </item>
+        <item>Вул. Вадима Гетьмана, 42</item>
+
+        <item>com.yalantis_task2:drawable/image_like
+        </item>
+        <item>49</item>
+        <item>Кві 26, 2016</item>
+        <item>-14 днів</item>
+    </string-array>
+
+    <string-array name="block2">
+        <item>com.yalantis_task2:drawable/image_list</item>
+        <item>Ремонт та обслуговування ліфтів </item>
+        <item>Вул. Вадима Гетьмана, 42</item>
+        <item>com.yalantis_task2:drawable/image_like</item>
+        <item>9</item>
+        <item>Кві 27, 2016</item>
+        <item>-14 днів</item>
+    </string-array>
+
+    <array name="first_tab">
+        <item>@array/block2</item>
+        <item>@array/block1</item>
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block1</item>
+        <item>@array/block0</item>
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+    </array>
+
+    <array name="second_tab">
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block2</item>
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block2</item>
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block0</item>
+        <item>@array/block2</item>
+    </array>
+
+    <array name="third_tab">
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block1</item>
+        <item>@array/block2</item>
+        <item>@array/block0</item>
+        <item>@array/block1</item>
+        <item>@array/block0</item>
+        <item>@array/block2</item>
+        <item>@array/block0</item>
+        <item>@array/block1</item>
+    </array>
+
+    <string name="title_firstActivity">CE-1257218</string>
+    <string name="text_inwork">In work</string>
+    <string name="municipal_economy">Municipal economy</string>
+    <string name="created">Created</string>
+    <string name="registrated">Registrated</string>
+    <string name="solve_until">Solve until</string>
+    <string name="date_created">25 February 2016</string>
+    <string name="date_registrated">26 February 2016</string>
+    <string name="solutions_date">29 February 2016</string>
+    <string name="responsible">Responsible</string>
+    <string name="department">Dnepropetrovsk MBK()</string>
+    <string name="description">Opened hatch (near the billboard), the area of 18 and 19 trams turn to the Mir avenue from the Donetsk roadway</string>
+
+</resources>
