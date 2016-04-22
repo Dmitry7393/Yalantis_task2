@@ -50,4 +50,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/txt_textSize</item>
     </style>
+    <style name="vertical_divider">
+        <item name="android:layout_width">@dimen/line_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorBlack</item>
+        <item name="android:alpha">0.11</item>
+    </style>
+
+    <style name="style_image_like">
+        <item name="android:layout_width">@dimen/image2_width</item>
+        <item name="android:layout_height">@dimen/image2_height</item>
+        <item name="android:alpha">0.19</item>
+    </style>
 </resources>

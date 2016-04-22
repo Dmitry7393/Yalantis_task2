@@ -29,6 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:layout_behavior="com.yalantis_task2.FAB_Hide_on_Scroll"
+        app:layout_behavior="com.yalantis_task2.FABHideOnScroll"
         android:src="@drawable/f_a_b_2_x" />
 </android.support.design.widget.CoordinatorLayout>

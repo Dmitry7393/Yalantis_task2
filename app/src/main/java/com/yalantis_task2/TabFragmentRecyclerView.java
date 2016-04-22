@@ -12,17 +12,18 @@ import java.util.ArrayList;
 
 public class TabFragmentRecyclerView extends Fragment {
     private ArrayList<ContactInfo> myList ;
-
+    private static final int Tab1 = 1;
+    private static final int Tab2 = 2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Bundle args = getArguments();
-        int index = args.getInt("index", 0);
+        int index = args.getInt("TabNumber", 0);
         MainActivity activity = (MainActivity) getActivity();
 
         if(index == 1)
-            myList = activity.createList(1);
+            myList = activity.createList(Tab1);
         if(index == 2)
-            myList = activity.createList(2);
+            myList = activity.createList(Tab2);
 
         View rootView ;
         rootView = inflater.inflate(R.layout.tab_fragment_recyclerview, container, false);

@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(fab != null) {
+        if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -46,27 +47,27 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        if(drawer != null)
-        drawer.addDrawerListener(toggle);
+        if (drawer != null)
+            drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        if(navigationView != null)
-        navigationView.setNavigationItemSelectedListener(this);
+        if (navigationView != null)
+            navigationView.setNavigationItemSelectedListener(this);
 
         initTabs();
     }
-    private void initTabs()
-    {
+
+    private void initTabs() {
         TabFragmentRecyclerView tabfragment1 = new TabFragmentRecyclerView();
         Bundle args1 = new Bundle();
-        args1.putInt("index", 1);
+        args1.putInt("TabNumber", 1);
         tabfragment1.setArguments(args1);
 
 
         TabFragmentRecyclerView tabfr2 = new TabFragmentRecyclerView();
         Bundle args2 = new Bundle();
-        args2.putInt("index", 2);
+        args2.putInt("TabNumber", 2);
         tabfr2.setArguments(args2);
 
         TabFragmentListView tabfr3 = new TabFragmentListView();
@@ -77,23 +78,22 @@ public class MainActivity extends AppCompatActivity
         fragments.add(tabfr3);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        if(tabLayout != null) {
+        if (tabLayout != null) {
             tabLayout.addTab(tabLayout.newTab().setText("В роботі"));
             tabLayout.addTab(tabLayout.newTab().setText("Виконано"));
             tabLayout.addTab(tabLayout.newTab().setText("Очікує"));
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         }
 
-
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         final PagerAdapter pagerAdapter = new PagerAdapter
                 (getSupportFragmentManager(), fragments);
-        if(viewPager != null) {
+        if (viewPager != null) {
             viewPager.setAdapter(pagerAdapter);
             viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         }
 
-        if(tabLayout != null && viewPager != null) {
+        if (tabLayout != null && viewPager != null) {
             tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
@@ -113,10 +113,11 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if(drawer != null) {
+        if (drawer != null) {
             if (drawer.isDrawerOpen(GravityCompat.START)) {
                 drawer.closeDrawer(GravityCompat.START);
             } else {
@@ -124,12 +125,14 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -160,23 +163,25 @@ public class MainActivity extends AppCompatActivity
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if(drawer != null)
-        drawer.closeDrawer(GravityCompat.START);
+        if (drawer != null)
+            drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     public void CardViewOnClick1(View view) {
         Intent intent = new Intent(MainActivity.this, ActivityFirstTask.class);
         startActivity(intent);
     }
-    public ArrayList<ContactInfo> createList(int tab) {
+
+    public ArrayList<ContactInfo> createList(int tabNumber) {
         ArrayList<ContactInfo> listData = new ArrayList<>();
         Resources res = getResources();
         TypedArray ta = res.obtainTypedArray(R.array.first_tab);
-        if(tab == 1)
+        if (tabNumber == 1)
             ta = res.obtainTypedArray(R.array.first_tab);
-        if(tab == 2)
-           ta = res.obtainTypedArray(R.array.second_tab);
-        if(tab == 3)
+        if (tabNumber == 2)
+            ta = res.obtainTypedArray(R.array.second_tab);
+        if (tabNumber == 3)
             ta = res.obtainTypedArray(R.array.third_tab);
 
         int n = ta.length();

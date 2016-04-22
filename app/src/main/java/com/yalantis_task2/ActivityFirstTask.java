@@ -12,7 +12,8 @@ import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
 public class ActivityFirstTask extends AppCompatActivity {
-    private static final int SPACE_SIZE = 15;
+    private static final int SPACE_SIZE_BETWEEN_IMAGES = 15;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,25 +23,27 @@ public class ActivityFirstTask extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null)
+        if (actionBar != null)
             actionBar.setDisplayHomeAsUpEnabled(true);
 
-        int[] mListImages = new int[]{ R.drawable.image_bridge, R.drawable.seafront,
+        int[] mListImages = new int[]{R.drawable.image_bridge, R.drawable.seafront,
                 R.drawable.dnepr_night, R.drawable.karl_marx_street,
                 R.drawable.most_city, R.drawable.merefo_hersonsky_bridge_dnipropetrovsk,
                 R.drawable.seafront_winter
         };
         initRecyclerView(mListImages);
     }
-    /** Creating RecyclerView */
-    private void initRecyclerView(int[] mListImages)
-    {
-        RecyclerView mRecyclerView =  (RecyclerView) findViewById(R.id.recyclerView);
 
-        if(mRecyclerView != null)
-        {
+    /**
+     * Creating RecyclerView
+     */
+    private void initRecyclerView(int[] mListImages) {
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
+        if (mRecyclerView != null) {
             mRecyclerView.setHasFixedSize(true);
-            LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+            LinearLayoutManager layoutManager =
+                    new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
             layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
             mRecyclerView.setLayoutManager(layoutManager);
 
@@ -48,10 +51,11 @@ public class ActivityFirstTask extends AppCompatActivity {
 
             mRecyclerView.setAdapter(mAdapter);
             RecyclerView.ItemDecoration itemDecoration =
-                    new DividerItemDecoration(SPACE_SIZE);
+                    new DividerItemDecoration(SPACE_SIZE_BETWEEN_IMAGES);
             mRecyclerView.addItemDecoration(itemDecoration);
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -60,7 +64,10 @@ public class ActivityFirstTask extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    /** Show toast with control name when user presses any control*/
+
+    /**
+     * Show toast with control name when user presses any control
+     */
     public void onClickToast(View view) {
         String mText = view.getClass().getSimpleName();
         Toast.makeText(this, mText, Toast.LENGTH_LONG).show();

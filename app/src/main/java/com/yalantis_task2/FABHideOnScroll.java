@@ -8,9 +8,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
-public class FAB_Hide_on_Scroll extends FloatingActionButton.Behavior {
+public class FABHideOnScroll extends FloatingActionButton.Behavior {
 
-    public FAB_Hide_on_Scroll(Context context, AttributeSet attrs) {
+    public FABHideOnScroll(Context context, AttributeSet attrs) {
         super();
     }
 

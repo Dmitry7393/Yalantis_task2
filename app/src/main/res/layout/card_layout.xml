@@ -25,13 +25,10 @@
             android:layout_height="@dimen/image1_size"
             />
         <View
-            android:layout_width="@dimen/line_width"
             android:id="@+id/divider"
+            style="@style/vertical_divider"
             android:layout_marginLeft="@dimen/line_marginLeft"
-            android:layout_marginStart="@dimen/line_marginLeft"
-            android:layout_height="match_parent"
-            android:background="@color/colorBlack"
-            android:alpha="0.11"/>
+            android:layout_marginStart="@dimen/line_marginLeft" />
         <TextView
             android:id="@+id/txtNameEnterprise"
             android:layout_marginLeft="@dimen/text_title_marginLeft"
@@ -44,12 +41,10 @@
 
         <ImageView
             android:id="@+id/imageLike"
-            android:layout_width="@dimen/image2_width"
-            android:layout_height="@dimen/image2_height"
+            style="@style/style_image_like"
             android:layout_marginLeft="@dimen/image2_marginLeft"
             android:layout_marginStart="@dimen/image2_marginLeft"
             android:layout_marginTop="@dimen/image2_marginTop"
-            android:alpha="0.19"
             />
         <TextView
             android:id="@+id/txtAmountLikes"

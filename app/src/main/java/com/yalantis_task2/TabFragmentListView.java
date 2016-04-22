@@ -9,6 +9,8 @@ import android.widget.ListView;
 import java.util.List;
 
 public class TabFragmentListView extends Fragment {
+    private static final int Tab3 = 3;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         MainActivity activity = (MainActivity) getActivity();
@@ -16,7 +18,7 @@ public class TabFragmentListView extends Fragment {
 
         ListView tabListView = (ListView) rootView.findViewById(R.id.list_view);
 
-        List<ContactInfo> myList = activity.createList(3);
+        List<ContactInfo> myList = activity.createList(Tab3);
         MyListAdapter customAdapter = new MyListAdapter(getContext(), R.layout.card_layout, myList);
 
         tabListView.setAdapter(customAdapter);

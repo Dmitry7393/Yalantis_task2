@@ -58,11 +58,11 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         public ContactViewHolder(View v) {
             super(v);
             vImageEnterprise = (ImageView) v.findViewById(R.id.image1);
-            vNameEnterprise =  (TextView) v.findViewById(R.id.txtNameEnterprise);
-            vTitleStreet = (TextView)  v.findViewById(R.id.txtStreet);
+            vNameEnterprise = (TextView) v.findViewById(R.id.txtNameEnterprise);
+            vTitleStreet = (TextView) v.findViewById(R.id.txtStreet);
             vImageLike = (ImageView) v.findViewById(R.id.imageLike);
             vAmountLikes = (TextView) v.findViewById(R.id.txtAmountLikes);
-            vTitleDate = (TextView)  v.findViewById(R.id.txtDate);
+            vTitleDate = (TextView) v.findViewById(R.id.txtDate);
             vAmountDays = (TextView) v.findViewById(R.id.txtAmountDays);
         }
     }
