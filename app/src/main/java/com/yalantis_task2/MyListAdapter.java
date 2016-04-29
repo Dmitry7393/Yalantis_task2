@@ -21,7 +21,7 @@ public class MyListAdapter extends ArrayAdapter<ContactInfo> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = convertView;
+        View v = convertView; //[Comment] Very bad. Use ViewHolder
 
         if (v == null) {
             LayoutInflater vi;

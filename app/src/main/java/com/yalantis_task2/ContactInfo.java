@@ -65,7 +65,7 @@ public class ContactInfo {
         return amountDays;
     }
 
-    public ContactInfo() {
+    public ContactInfo() { //[Comment] Unnecessary. Objects already have default constructor
 
     }
 }

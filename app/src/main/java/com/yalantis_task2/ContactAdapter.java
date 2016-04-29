@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
 
-    private ArrayList<ContactInfo> contactList;
+    private ArrayList<ContactInfo> contactList; //[Comment] Use abstraction instead of realization
 
     public ContactAdapter(ArrayList<ContactInfo> contactList) {
         this.contactList = contactList;
@@ -52,7 +52,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         protected TextView vTitleStreet;
         protected ImageView vImageLike;
         protected TextView vAmountLikes;
-        protected TextView vTitleDate;
+        protected TextView vTitleDate; //[Comment] Why protected?
         protected TextView vAmountDays;
 
         public ContactViewHolder(View v) {

@@ -10,7 +10,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
     public DividerItemDecoration(int spaceSize) {
         this.mSpaceSize = spaceSize;
-    }
+    } //[Comment] Unnecessary "this"
 
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         outRect.right = mSpaceSize;

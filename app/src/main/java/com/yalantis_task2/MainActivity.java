@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         if (tabLayout != null) {
-            tabLayout.addTab(tabLayout.newTab().setText("В роботі"));
+            tabLayout.addTab(tabLayout.newTab().setText("В роботі")); //[Comment] Looks like hardcode
             tabLayout.addTab(tabLayout.newTab().setText("Виконано"));
             tabLayout.addTab(tabLayout.newTab().setText("Очікує"));
             tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -167,12 +167,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void CardViewOnClick1(View view) {
+    public void CardViewOnClick1(View view) { //[Comment] NEVER use such names
         Intent intent = new Intent(MainActivity.this, ActivityFirstTask.class);
         startActivity(intent);
     }
 
-    public ArrayList<ContactInfo> createList(int tabNumber) {
+    public ArrayList<ContactInfo> createList(int tabNumber) { //[Comment] It should not be in activity
         ArrayList<ContactInfo> listData = new ArrayList<>();
         Resources res = getResources();
         TypedArray ta = res.obtainTypedArray(R.array.first_tab);

@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
 
-public class ActivityFirstTask extends AppCompatActivity {
+public class ActivityFirstTask extends AppCompatActivity { //[Comment] Please make project structure with packages
     private static final int SPACE_SIZE_BETWEEN_IMAGES = 15;
 
     @Override
@@ -38,7 +38,7 @@ public class ActivityFirstTask extends AppCompatActivity {
      * Creating RecyclerView
      */
     private void initRecyclerView(int[] mListImages) {
-        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView); //[Comment] Without "m" it's local
 
         if (mRecyclerView != null) {
             mRecyclerView.setHasFixedSize(true);
