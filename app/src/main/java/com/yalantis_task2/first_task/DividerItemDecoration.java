@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.first_task;
 
 
 import android.graphics.Rect;
@@ -9,7 +9,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private int mSpaceSize;
 
     public DividerItemDecoration(int spaceSize) {
-        this.mSpaceSize = spaceSize;
+        mSpaceSize = spaceSize;
     }
 
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {

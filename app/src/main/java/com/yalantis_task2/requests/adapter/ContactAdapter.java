@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.requests.adapter;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -8,13 +8,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.yalantis_task2.R;
+import com.yalantis_task2.data.ContactInfo;
+import java.util.List;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
 
-    private ArrayList<ContactInfo> contactList;
+    private List<ContactInfo> contactList;
 
-    public ContactAdapter(ArrayList<ContactInfo> contactList) {
+    public ContactAdapter(List<ContactInfo> contactList) {
         this.contactList = contactList;
     }
 
@@ -47,13 +49,13 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
     }
 
     public static class ContactViewHolder extends RecyclerView.ViewHolder {
-        protected ImageView vImageEnterprise;
-        protected TextView vNameEnterprise;
-        protected TextView vTitleStreet;
-        protected ImageView vImageLike;
-        protected TextView vAmountLikes;
-        protected TextView vTitleDate;
-        protected TextView vAmountDays;
+        private ImageView vImageEnterprise;
+        private TextView vNameEnterprise;
+        private TextView vTitleStreet;
+        private ImageView vImageLike;
+        private TextView vAmountLikes;
+        private TextView vTitleDate;
+        private TextView vAmountDays;
 
         public ContactViewHolder(View v) {
             super(v);

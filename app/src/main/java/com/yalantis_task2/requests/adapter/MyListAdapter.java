@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.requests.adapter;
 
 
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.yalantis_task2.R;
+import com.yalantis_task2.data.*;
 import java.util.ArrayList;
 import java.util.List;
 

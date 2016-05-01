@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.yalantis_task2.ActivityFirstTask">
+    tools:context=".first_task.ActivityFirstTask">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

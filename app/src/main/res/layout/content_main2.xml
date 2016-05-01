@@ -12,7 +12,7 @@
     android:background="@color/colorBackgroundFirstTask"
     android:scrollbars="none"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.yalantis_task2.ActivityFirstTask"
+    tools:context=".first_task.ActivityFirstTask"
     android:onClick="onClickToast"
     tools:showIn="@layout/activity_main2">
 

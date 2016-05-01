@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.data;
 
 public class ContactInfo {
     private int imageEnterprise;
@@ -63,9 +63,5 @@ public class ContactInfo {
 
     public String getAmountDays() {
         return amountDays;
-    }
-
-    public ContactInfo() {
-
     }
 }

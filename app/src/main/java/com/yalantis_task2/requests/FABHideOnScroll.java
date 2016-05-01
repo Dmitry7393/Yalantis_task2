@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.requests;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.first_task;
 
 
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import android.support.v7.widget.Toolbar;
+
+import com.yalantis_task2.R;
 
 public class ActivityFirstTask extends AppCompatActivity {
     private static final int SPACE_SIZE_BETWEEN_IMAGES = 15;
@@ -38,21 +40,21 @@ public class ActivityFirstTask extends AppCompatActivity {
      * Creating RecyclerView
      */
     private void initRecyclerView(int[] mListImages) {
-        RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        if (mRecyclerView != null) {
-            mRecyclerView.setHasFixedSize(true);
+        if (recyclerView != null) {
+            recyclerView.setHasFixedSize(true);
             LinearLayoutManager layoutManager =
                     new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
             layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-            mRecyclerView.setLayoutManager(layoutManager);
+            recyclerView.setLayoutManager(layoutManager);
 
             RecyclerView.Adapter mAdapter = new MyRecyclerViewAdapter(mListImages, this);
 
-            mRecyclerView.setAdapter(mAdapter);
+            recyclerView.setAdapter(mAdapter);
             RecyclerView.ItemDecoration itemDecoration =
                     new DividerItemDecoration(SPACE_SIZE_BETWEEN_IMAGES);
-            mRecyclerView.addItemDecoration(itemDecoration);
+            recyclerView.addItemDecoration(itemDecoration);
         }
     }
 

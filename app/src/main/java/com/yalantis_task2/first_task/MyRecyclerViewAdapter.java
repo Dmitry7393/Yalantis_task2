@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.first_task;
 
 
 import android.content.Context;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+import com.yalantis_task2.R;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> {
     private int[] mListImages;

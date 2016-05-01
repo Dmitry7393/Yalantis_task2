@@ -1,4 +1,4 @@
-package com.yalantis_task2;
+package com.yalantis_task2.requests.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,10 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
+import com.yalantis_task2.requests.MainActivity;
+import com.yalantis_task2.R;
+import com.yalantis_task2.data.*;
+import com.yalantis_task2.requests.adapter.ContactAdapter;
+
+import java.util.List;
 
 public class TabFragmentRecyclerView extends Fragment {
-    private ArrayList<ContactInfo> myList ;
+    private List<ContactInfo> myList ;
     private static final int Tab1 = 1;
     private static final int Tab2 = 2;
     @Override
@@ -19,11 +24,11 @@ public class TabFragmentRecyclerView extends Fragment {
         Bundle args = getArguments();
         int index = args.getInt("TabNumber", 0);
         MainActivity activity = (MainActivity) getActivity();
-
+        DataSet myDataSet = new DataSet(activity.getApplicationContext());
         if(index == 1)
-            myList = activity.createList(Tab1);
+            myList = myDataSet.createList(Tab1);
         if(index == 2)
-            myList = activity.createList(Tab2);
+            myList = myDataSet.createList(Tab2);
 
         View rootView ;
         rootView = inflater.inflate(R.layout.tab_fragment_recyclerview, container, false);
