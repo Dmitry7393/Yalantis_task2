@@ -16,7 +16,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     public MyRecyclerViewAdapter(int[] mListImages, Context mContext) {
         this.mContext = mContext;
-        this.mListImages = mListImages;
+        this.mListImages = mListImages; //[Comment] Wrong arguments names
     }
 
     @Override

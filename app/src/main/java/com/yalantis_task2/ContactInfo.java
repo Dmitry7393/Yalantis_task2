@@ -11,7 +11,7 @@ public class ContactInfo {
 
     public void setImageEnterprise(int i) {
         imageEnterprise = i;
-    }
+    } //[Comment] s,i,r wrong argument names
 
     public void setNameEnterprise(String s) {
         nameEnterprise = s;

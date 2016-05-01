@@ -9,7 +9,7 @@ import android.widget.ListView;
 import java.util.List;
 
 public class TabFragmentListView extends Fragment {
-    private static final int Tab3 = 3;
+    private static final int Tab3 = 3; //[Comment] Wrong naming for constants
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class TabFragmentListView extends Fragment {
         ListView tabListView = (ListView) rootView.findViewById(R.id.list_view);
 
         List<ContactInfo> myList = activity.createList(Tab3);
-        MyListAdapter customAdapter = new MyListAdapter(getContext(), R.layout.card_layout, myList);
+        MyListAdapter customAdapter = new MyListAdapter(getContext(), R.layout.card_layout, myList); //[Comment] Your list adapter?
 
         tabListView.setAdapter(customAdapter);
 

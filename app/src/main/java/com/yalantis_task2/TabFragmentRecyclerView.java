@@ -25,7 +25,7 @@ public class TabFragmentRecyclerView extends Fragment {
         if(index == 2)
             myList = activity.createList(Tab2);
 
-        View rootView ;
+        View rootView;
         rootView = inflater.inflate(R.layout.tab_fragment_recyclerview, container, false);
         RecyclerView recList = (RecyclerView) rootView.findViewById(R.id.cardList);
         if (recList != null) {

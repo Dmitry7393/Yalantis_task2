@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyListAdapter extends ArrayAdapter<ContactInfo> {
-    private  List<ContactInfo> myList = new ArrayList<>();
+    private  List<ContactInfo> myList = new ArrayList<>(); //[Comment] Your list?
     public MyListAdapter(Context context, int resource, List<ContactInfo> items) {
         super(context, resource, items);
         myList = items;
@@ -24,7 +24,7 @@ public class MyListAdapter extends ArrayAdapter<ContactInfo> {
         View v = convertView; //[Comment] Very bad. Use ViewHolder
 
         if (v == null) {
-            LayoutInflater vi;
+            LayoutInflater vi;//[Comment] Why you create object here, and in next row initialize it? What is vi?
             vi = LayoutInflater.from(getContext());
             v = vi.inflate(R.layout.card_layout, parent, false);
         }
@@ -34,7 +34,7 @@ public class MyListAdapter extends ArrayAdapter<ContactInfo> {
         ImageView  vImageLike = (ImageView) v.findViewById(R.id.imageLike);
         TextView   vAmountLikes = (TextView) v.findViewById(R.id.txtAmountLikes);
         TextView  vTitleDate = (TextView)  v.findViewById(R.id.txtDate);
-        TextView  vAmountDays = (TextView) v.findViewById(R.id.txtAmountDays);
+        TextView  vAmountDays = (TextView) v.findViewById(R.id.txtAmountDays); //[Comment] Wrong formatting
 
         for(int i = 0; i < myList.size(); i++) {
             vImageEnterprise.setImageResource(myList.get(i).getImageEnterprise());
