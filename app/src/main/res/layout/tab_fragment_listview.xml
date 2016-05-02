@@ -11,5 +11,4 @@
         android:padding="8dp"
         android:dividerHeight="8dp">
     </ListView>
-
 </RelativeLayout>

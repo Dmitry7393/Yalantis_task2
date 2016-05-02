@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/card_view_height"
     card_view:cardCornerRadius="@dimen/cardCornerRadius"
-    android:onClick="CardViewOnClick1">
+    android:onClick="CardViewOnClick">
 
     <RelativeLayout
         android:layout_width="match_parent"

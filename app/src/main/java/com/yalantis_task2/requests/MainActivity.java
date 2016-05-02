@@ -80,21 +80,16 @@ public class MainActivity extends AppCompatActivity
         fragments.add(tabFragmentRecyclerView2);
         fragments.add(tabFragmentListView);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        if (tabLayout != null) {
-            tabLayout.addTab(tabLayout.newTab().setText("В роботі"));
-            tabLayout.addTab(tabLayout.newTab().setText("Виконано"));
-            tabLayout.addTab(tabLayout.newTab().setText("Очікує"));
-            tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        // Get the ViewPager and set it's PagerAdapter so that it can display items
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        if (viewPager != null) {
+            viewPager.setAdapter(new PagerAdapter(getSupportFragmentManager(),
+                    fragments));
         }
 
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        final PagerAdapter pagerAdapter = new PagerAdapter
-                (getSupportFragmentManager(), fragments);
-        if (viewPager != null) {
-            viewPager.setAdapter(pagerAdapter);
-            viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        }
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        if (tabLayout != null)
+            tabLayout.setupWithViewPager(viewPager);
 
         if (tabLayout != null && viewPager != null) {
             tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -171,7 +166,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void CardViewOnClick1(View view) {
+    public void CardViewOnClick(View view) {
         Intent intent = new Intent(MainActivity.this, ActivityFirstTask.class);
         startActivity(intent);
     }

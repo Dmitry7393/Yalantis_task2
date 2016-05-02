@@ -9,32 +9,32 @@ public class ContactInfo {
     private String titleDate;
     private String amountDays;
 
-    public void setImageEnterprise(int i) {
-        imageEnterprise = i;
+    public void setImageEnterprise(int idImageEnterprise) {
+        imageEnterprise = idImageEnterprise;
     }
 
-    public void setNameEnterprise(String s) {
-        nameEnterprise = s;
+    public void setNameEnterprise(String nameEnterprise) {
+        this.nameEnterprise = nameEnterprise;
     }
 
-    public void setTitleStreet(String s) {
-        titleStreet = s;
+    public void setTitleStreet(String titleStreet) {
+        this.titleStreet = titleStreet;
     }
 
-    public void setImageLike(int r) {
-        imageLike = r;
+    public void setImageLike(int idImageLike) {
+        imageLike = idImageLike;
     }
 
-    public void setAmountLikes(String s) {
-        amountLikes = s;
+    public void setAmountLikes(String amountLikes) {
+        this.amountLikes = amountLikes;
     }
 
-    public void setTitleDate(String s) {
-        titleDate = s;
+    public void setTitleDate(String titleDate) {
+        this.titleDate = titleDate;
     }
 
-    public void setAmountDays(String s) {
-        amountDays = s;
+    public void setAmountDays(String amountDays) {
+        this.amountDays = amountDays;
     }
 
     public int getImageEnterprise() {
