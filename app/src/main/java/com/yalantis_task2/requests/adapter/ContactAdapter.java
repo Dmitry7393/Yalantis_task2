@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.yalantis_task2.R;
 import com.yalantis_task2.data.ContactInfo;
+
 import java.util.List;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {

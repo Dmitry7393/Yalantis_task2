@@ -22,7 +22,7 @@ public class TabFragmentListView extends Fragment implements Animation.Animation
     private static final int TAB3 = 3;
     private Animation mAnimationHide;
     private Animation mAnimationShow;
-    private FloatingActionButton mFab1;
+    private FloatingActionButton mFab;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,16 +37,16 @@ public class TabFragmentListView extends Fragment implements Animation.Animation
         mAnimationShow.setAnimationListener(this);
 
         ListView tabListView = (ListView) rootView.findViewById(R.id.list_view);
-        mFab1 = (FloatingActionButton) activity.findViewById(R.id.fab);
+        mFab = (FloatingActionButton) activity.findViewById(R.id.fab);
 
         tabListView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
                 if (scrollState != SCROLL_STATE_TOUCH_SCROLL) {
-                    if (mFab1.getVisibility() == View.VISIBLE && (mAnimationHide.hasEnded() || !mAnimationHide.isInitialized())) {
-                        mFab1.startAnimation(mAnimationHide);
-                    } else if ((mAnimationShow.hasEnded() && mAnimationHide.hasEnded()) || mFab1.getVisibility() == View.INVISIBLE) {
-                        mFab1.startAnimation(mAnimationShow);
+                    if (mFab.getVisibility() == View.VISIBLE && (mAnimationHide.hasEnded() || !mAnimationHide.isInitialized())) {
+                        mFab.startAnimation(mAnimationHide);
+                    } else if ((mAnimationShow.hasEnded() && mAnimationHide.hasEnded()) || mFab.getVisibility() == View.INVISIBLE) {
+                        mFab.startAnimation(mAnimationShow);
                     }
                 }
             }
@@ -76,10 +76,10 @@ public class TabFragmentListView extends Fragment implements Animation.Animation
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        if (mFab1.getVisibility() == View.VISIBLE) {
-            mFab1.setVisibility(View.INVISIBLE);
+        if (mFab.getVisibility() == View.VISIBLE) {
+            mFab.setVisibility(View.INVISIBLE);
         } else {
-            mFab1.setVisibility(View.VISIBLE);
+            mFab.setVisibility(View.VISIBLE);
         }
     }
 
